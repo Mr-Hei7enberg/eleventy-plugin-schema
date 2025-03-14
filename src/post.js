@@ -35,7 +35,7 @@ module.exports = ({ meta, tags = [] }) => {
   const post = {
     "@type": "BlogPosting",
     author: author(meta.author),
-    keywords: meta.keywords ? meta.keywords.join(",") : tags.join(","),
+    keywords: meta.keywords ? meta.keywords : tags.join(",")
   };
 
   if (meta.published) {
